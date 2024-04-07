@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 711466d73ab8c14418831d27185d9528
+  - enabled: 1
+    path: Assets/Scenes/1.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/2.unity
+    guid: a826823cc6d782741b097cc9f6215c8b
+  - enabled: 1
+    path: Assets/Scenes/3.unity
+    guid: b9c1750ad3d1d194290cd0ece5d28245
+  - enabled: 1
+    path: Assets/Scenes/4.unity
+    guid: 450755ad197b15b4bb163d6a16d9a4d9
+  - enabled: 1
+    path: Assets/Scenes/5.unity
+    guid: 1361147b770a4aa499f96449c884cb2d
+  - enabled: 1
+    path: Assets/Scenes/6.unity
+    guid: 9e5bbc68f6a0c4b439b81d5bb1e6ed52
+  - enabled: 1
+    path: Assets/Scenes/7.unity
+    guid: 4b35ed1b6296ada48acf555e1a022573
+  - enabled: 1
+    path: Assets/Scenes/8.unity
+    guid: 676216314b534864b8bd7dcf569307bb
+  - enabled: 1
+    path: Assets/Scenes/9.unity
+    guid: 23bc24eeb7700cc47917ad188316c05d
+  - enabled: 1
+    path: Assets/Scenes/10.unity
+    guid: 27905f6e11397214c899f973546f9b48
+  - enabled: 1
+    path: Assets/Scenes/11.unity
+    guid: fe9f97898fdf1014bb78703ee880237b
+  - enabled: 1
+    path: Assets/Scenes/12.unity
+    guid: 33612bcfcda4bc048a53bab52200f6e9
+  - enabled: 1
+    path: Assets/Scenes/13.unity
+    guid: 9b57d720b479eef4eb4ed3a22fd0b935
+  - enabled: 1
+    path: Assets/Scenes/14.unity
+    guid: f34fe6914419c934fa522edf08c273b5
+  - enabled: 1
+    path: Assets/Scenes/15.unity
+    guid: 34e5b5679f82c604d80fe00fb94278db
+  - enabled: 1
+    path: Assets/Scenes/16.unity
+    guid: 45ea12bbe82c4ab4d84ab81c348f40fc
+  - enabled: 1
+    path: Assets/Scenes/17.unity
+    guid: abdc89881b6325c4db8f22d640d408d0
+  - enabled: 1
+    path: Assets/Scenes/18.unity
+    guid: ef87ff4103ee08849abf8c1e54ab9d4d
+  - enabled: 1
+    path: Assets/Scenes/19.unity
+    guid: 5243381788f84e14fa7491088a1f7741
+  - enabled: 1
+    path: Assets/Scenes/20.unity
+    guid: f3131dad6f8eb0c44a17b677a5addb45
+  m_configObjects: {}
