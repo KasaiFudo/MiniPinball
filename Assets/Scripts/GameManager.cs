@@ -71,6 +71,7 @@ public class GameManager : MonoBehaviour
         textOfResults.text = "Your ball is win! \nc:";
         results.text = $"Targets catched: {countOfCatchedTargets} \n Score: {score}";
         LevelSectionHandler.UnlockNewLevels(SceneManager.GetActiveScene().buildIndex);
+        LevelSectionHandler.UpdateLevelScore(SceneManager.GetActiveScene().buildIndex, score);
     }
     public void Pause()
     {

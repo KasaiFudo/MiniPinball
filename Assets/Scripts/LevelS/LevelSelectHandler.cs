@@ -74,9 +74,8 @@ public class LevelSectionHandler : MonoBehaviour
             SceneManager.LoadScene(level);
         }
     }
-    public static void SetNewDataOfLevel(int finishedLevel, int score)
+    public static void UnlockNewLevels(int finishedLevel)
     {
-        UpdateLevelScore(finishedLevel, score);
         if (CheckLevel(finishedLevel))
         {
             if(unlockedLevels < totalLevels)
@@ -99,7 +98,7 @@ public class LevelSectionHandler : MonoBehaviour
             level._isUnlocked = level._levelIndex <= unlockedLevels;
         }
     }
-    private static void UpdateLevelScore(int indexLevel, int score)
+    public static void UpdateLevelScore(int indexLevel, int score)
     {
         if (levels[indexLevel - 1]._isFinished)
         {
