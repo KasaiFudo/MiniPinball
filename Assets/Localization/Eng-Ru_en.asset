@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Eng-Ru_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 6c2836b3e19e60e4b9a370aaea7429e1, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 479038775296
+    m_Localized: Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4831564505088
+    m_Localized: "Support \ngame"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11855425675264
+    m_Localized: "Select \nlevel"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14263082000384
+    m_Localized: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14825525583872
+    m_Localized: About game and developer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15195425447936
+    m_Localized: Return
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15447217905664
+    m_Localized: Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15845941026816
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16148434231296
+    m_Localized: Next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16721044807680
+    m_Localized: Sounds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16953082093568
+    m_Localized: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17406054342656
+    m_Localized: Discord server
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17714759311360
+    m_Localized: Developer videos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17998193598464
+    m_Localized: Strams and fun
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18211260047360
+    m_Localized: Telegram channel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32549932867584
+    m_Localized: Targets
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33195847294976
+    m_Localized: Springs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33677525360640
+    m_Localized: Magnet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34146750537728
+    m_Localized: Zerout
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

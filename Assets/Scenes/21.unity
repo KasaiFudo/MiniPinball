@@ -544,11 +544,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8088817159305821235, guid: 8d815549cd1adae419934efa135183e7, type: 3}
   m_PrefabInstance: {fileID: 490845975}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &490845980 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3716354893475653777, guid: 8d815549cd1adae419934efa135183e7, type: 3}
-  m_PrefabInstance: {fileID: 490845975}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &490845981 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8572025474773985011, guid: 8d815549cd1adae419934efa135183e7, type: 3}
@@ -592,6 +587,7 @@ GameObject:
   - component: {fileID: 560251720}
   - component: {fileID: 560251722}
   - component: {fileID: 560251721}
+  - component: {fileID: 560251723}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -616,8 +612,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.49, y: -6.37}
-  m_SizeDelta: {x: 20, y: 5}
+  m_AnchoredPosition: {x: -0.1911, y: -5.8103}
+  m_SizeDelta: {x: 12.6378, y: 3.8805}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &560251721
 MonoBehaviour:
@@ -641,8 +637,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Zerout
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 565026dec6d5a2a4e8525ec72396719f, type: 2}
-  m_sharedMaterial: {fileID: 7150738885873573132, guid: 565026dec6d5a2a4e8525ec72396719f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2d7721949213f2f42a6e7c556f0dfb3e, type: 2}
+  m_sharedMaterial: {fileID: 8277998905819444868, guid: 2d7721949213f2f42a6e7c556f0dfb3e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -666,15 +662,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 33.95
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_fontStyle: 16
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -731,7 +727,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7150738885873573132, guid: 565026dec6d5a2a4e8525ec72396719f, type: 2}
+  - {fileID: 8277998905819444868, guid: 2d7721949213f2f42a6e7c556f0dfb3e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -753,6 +749,46 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &560251723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560251719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:6c2836b3e19e60e4b9a370aaea7429e1
+    m_TableEntryReference:
+      m_KeyId: 34146750537728
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 560251721}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1001 &600326237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1549,7 +1585,7 @@ PrefabInstance:
     - target: {fileID: 2618252937519302627, guid: 85b7a078a2c275c4698c460495e95fb4, type: 3}
       propertyPath: continueButton
       value: 
-      objectReference: {fileID: 490845980}
+      objectReference: {fileID: 0}
     - target: {fileID: 2618252937519302627, guid: 85b7a078a2c275c4698c460495e95fb4, type: 3}
       propertyPath: targetsCounter
       value: 

@@ -68,4 +68,34 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/20.unity
     guid: f3131dad6f8eb0c44a17b677a5addb45
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Scenes/21.unity
+    guid: b944a98585b441d4895b9d92d79887cb
+  - enabled: 1
+    path: Assets/Scenes/22.unity
+    guid: 53ac6a57ffa75e24d800ed307a4d8b9f
+  - enabled: 1
+    path: Assets/Scenes/23.unity
+    guid: fa1f3f310210623449b43fc4480a260d
+  - enabled: 1
+    path: Assets/Scenes/24.unity
+    guid: ccc46522c6757f546a19e81fd06e8bc3
+  - enabled: 1
+    path: Assets/Scenes/25.unity
+    guid: dd5d942e5bc1c4e4abaa4bfca4f1614c
+  - enabled: 1
+    path: Assets/Scenes/26.unity
+    guid: 441000b77716b034091081d80a32b381
+  - enabled: 1
+    path: Assets/Scenes/27.unity
+    guid: 90c9ba192a7955d468a5f92359c5ccab
+  - enabled: 1
+    path: Assets/Scenes/28.unity
+    guid: 4262e60a295286b479429347ede4c141
+  - enabled: 1
+    path: Assets/Scenes/29.unity
+    guid: cd41bf1a803d6d54f93c0841c6a94bb4
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 200d84c5768e96e4fb0a141187ece1ba, type: 2}
+    com.unity.localization.addressable-group-rules: {fileID: 11400000, guid: 233781345b5785542905902b18c73433, type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: 27b900be36bac214b8cb6f89d31c2816, type: 2}

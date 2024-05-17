@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Eng-Ru Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Eng-Ru
+  m_TableCollectionNameGuidString: 6c2836b3e19e60e4b9a370aaea7429e1
+  m_Entries:
+  - m_Id: 479038775296
+    m_Key: Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4831564505088
+    m_Key: SupportGame
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11855425675264
+    m_Key: SelectLevel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14263082000384
+    m_Key: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14825525583872
+    m_Key: AboutGame
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15195425447936
+    m_Key: Return
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15447217905664
+    m_Key: Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15845941026816
+    m_Key: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16148434231296
+    m_Key: Next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16721044807680
+    m_Key: Sounds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16953082093568
+    m_Key: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17406054342656
+    m_Key: DiscordServer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17714759311360
+    m_Key: DeveloperVideos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17998193598464
+    m_Key: Streams
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18211260047360
+    m_Key: "Telegram\u0421hannel"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32549932867584
+    m_Key: Targets
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33195847294976
+    m_Key: Springs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33677525360640
+    m_Key: Magnet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34146750537728
+    m_Key: Zerout
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 4794052513861992489
+  references:
+    version: 2
+    RefIds:
+    - rid: 4794052513861992489
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1715954320694

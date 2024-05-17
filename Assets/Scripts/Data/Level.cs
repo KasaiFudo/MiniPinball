@@ -5,16 +5,15 @@ using UnityEngine;
 [System.Serializable]
 public class Level
 {
-    public int _levelIndex;
-    public int _score;
-    public bool _isFinished;
-    public bool _isUnlocked;
-
+    public int LevelIndex;
+    public int Score;
+    public bool IsFinished;
+    public bool IsUnlocked;
     public Level(int levelIndex)
     {
-        _isFinished = false;
-        _isUnlocked = false;
-        _score = 0;
-        _levelIndex = levelIndex;
+        IsFinished = false;
+        IsUnlocked = false;
+        Score = 0;
+        LevelIndex = levelIndex;
     }
 }

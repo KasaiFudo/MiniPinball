@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
         countOfCatchedTargets++;
         if(countOfCatchedTargets == countOfAllTargets)
         {
-            continueButton.SetActive(true);
+            CallWin();
             targetsCounter.text = $"Catch the targets: {countOfCatchedTargets}/{countOfAllTargets}";
             foreach(GameOverTrigger obj in FindObjectsOfType<GameOverTrigger>())
             {

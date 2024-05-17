@@ -8,7 +8,7 @@ using GoToApps.Serialization;
 public class LevelSectionHandler : MonoBehaviour
 {
     public static int unlockedLevels = 1;
-    private static int totalLevels = 21;
+    private static int totalLevels = 29;
     private static int maxfinishedLevel = 0;
     private static string pathFile;
     private static List<Level> levels;
@@ -23,7 +23,7 @@ public class LevelSectionHandler : MonoBehaviour
 
     private void Awake()
     {
-        pathFile = Path.Combine(Application.persistentDataPath, "save.dat");   
+        pathFile = Path.Combine(Application.persistentDataPath, "Levels.dat");   
         levelButtons = GetComponentsInChildren<LevelButton>();
         unlockedLevels = PlayerPrefs.GetInt("UnlockedLevels", 1);
         maxfinishedLevel = PlayerPrefs.GetInt("MaxfinishedLevel", 0);
@@ -32,11 +32,11 @@ public class LevelSectionHandler : MonoBehaviour
     }
     private void OnApplicationPause(bool pause)
     {
-        BinarySerializer.Serialize(pathFile, levels);
+        SaveLevels();
     }
     private void OnApplicationQuit()
     {
-        BinarySerializer.Serialize(pathFile, levels);
+        SaveLevels();
     }
     public void ClickNext()
     {
@@ -58,7 +58,10 @@ public class LevelSectionHandler : MonoBehaviour
             if (level < totalLevels)
             {
                 levelButtons[i].gameObject.SetActive(true);
-                levelButtons[i].Setup(levels[level]._levelIndex, levels[level]._isUnlocked, levels[level]._isFinished);
+                levelButtons[i].Setup(
+                    levels[level].LevelIndex, 
+                    levels[level].IsUnlocked, 
+                    levels[level].IsFinished);
             }
             else
             {
@@ -82,9 +85,7 @@ public class LevelSectionHandler : MonoBehaviour
             {
                 unlockedLevels += 2;
                 UpdateUnlockedLevels();
-                BinarySerializer.Serialize(pathFile, levels);
-                PlayerPrefs.SetInt("UnlockedLevels", unlockedLevels);
-                PlayerPrefs.SetInt("MaxfinishedLevel", maxfinishedLevel);
+                SaveLevels();
                 Debug.Log("Добавлено 2 открытых уровня, обновлен максималный завершенный уровень");
             }
         }
@@ -95,17 +96,17 @@ public class LevelSectionHandler : MonoBehaviour
     {
         foreach(var level in levels)
         {
-            level._isUnlocked = level._levelIndex <= unlockedLevels;
+            level.IsUnlocked = level.LevelIndex <= unlockedLevels;
         }
     }
     public static void UpdateLevelScore(int indexLevel, int score)
     {
-        if (levels[indexLevel - 1]._isFinished)
+        if (levels[indexLevel - 1].IsFinished)
         {
-            if(score < levels[indexLevel - 1]._score)
+            if(score < levels[indexLevel - 1].Score)
             {
-                Debug.Log($"Новый рекорд! Было: {levels[indexLevel - 1]._score}. Стало: {score}");
-                levels[indexLevel - 1]._score = score;
+                Debug.Log($"Новый рекорд! Было: {levels[indexLevel - 1].Score}. Стало: {score}");
+                levels[indexLevel - 1].Score = score;
             }
             else 
             {
@@ -114,10 +115,10 @@ public class LevelSectionHandler : MonoBehaviour
         }
         else
         {
-            levels[indexLevel - 1]._isFinished = true;
-            levels[indexLevel - 1]._score = score;
+            levels[indexLevel - 1].IsFinished = true;
+            levels[indexLevel - 1].Score = score;
         }
-        BinarySerializer.Serialize(pathFile, levels);
+        SaveLevels();
     }
     private static bool CheckLevel(int finishedLevel)
     {
@@ -137,6 +138,17 @@ public class LevelSectionHandler : MonoBehaviour
             if (File.Exists(pathFile))
             {
                 levels = BinarySerializer.Deserialize<List<Level>>(pathFile);
+                if(levels.Count < totalLevels)
+                {
+                    for (int levelIndex = levels.Count; levelIndex < totalLevels; levelIndex++)
+                    {
+                        Level level = new Level(levelIndex + 1)
+                        {
+                            IsUnlocked = levelIndex + 1 <= unlockedLevels,
+                        };
+                        levels.Add(level);
+                    }
+                }
             }
             else
             {
@@ -144,12 +156,18 @@ public class LevelSectionHandler : MonoBehaviour
                 {
                     Level level = new Level(levelIndex + 1)
                     {
-                        _isUnlocked = levelIndex + 1 <= unlockedLevels,
+                        IsUnlocked = levelIndex + 1 <= unlockedLevels,
                     };
                     levels.Add(level);
                 }
             }
         }
+    }
+    private static void SaveLevels()
+    {
+        BinarySerializer.Serialize(pathFile, levels);
+        PlayerPrefs.SetInt("UnlockedLevels", unlockedLevels);
+        PlayerPrefs.SetInt("MaxfinishedLevel", maxfinishedLevel);
     }
     private void CheckButton()
     {
