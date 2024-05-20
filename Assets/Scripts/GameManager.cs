@@ -4,89 +4,124 @@ using UnityEngine;
 using TMPro;
 using System.Linq;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private TMP_Text targetsCounter;
-    [SerializeField] private TMP_Text scoreCounter;
-    [SerializeField] private GameObject gamePanel;
-    [SerializeField] private GameObject menuPanel;
-    [SerializeField] private GameObject continueButton;
-    [SerializeField] private GameObject nextButton;
-    [SerializeField] private GameObject restartButton;
-    [SerializeField] private TMP_Text results;
-    [SerializeField] private TMP_Text textOfResults;
-    private int countOfAllTargets;
-    private int countOfCatchedTargets;
-    private int score;
-    private AudioSource soundWin;
-    private AudioSource soundFail;
+    public static GameManager Instance;
+    [SerializeField] private AudioSource soundWin;
+    [SerializeField] private AudioSource soundFail;
 
-    void Start()
+    public static UnityEvent OnGameStarted = new UnityEvent();
+
+    public static UnityEvent OnGameWin = new UnityEvent();
+
+    public static UnityEvent OnGameLose = new UnityEvent();
+
+    public static UnityEvent OnGamePaused = new UnityEvent();
+
+    public static UnityEvent OnGameContinue = new UnityEvent();
+
+    public static UnityEvent<int> OnScoreCountChanged = new UnityEvent<int>();
+
+    public static UnityEvent<int, int> OnTargetsCountChanged = new UnityEvent<int, int>();
+
+    private static int _countOfAllTargets;
+    private static int _countOfCatchedTargets;
+    private static int _score;
+
+    private void Awake()
     {
-        countOfAllTargets = FindObjectsOfType<TargetCatcher>().Length;
-        soundWin = GetComponent<AudioSource>();
-        soundFail = GetComponentInChildren<AudioSource>();
-        targetsCounter.text = $"Catch the targets: {countOfCatchedTargets}/{countOfAllTargets}";
+        if(Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+    private void Start()
+    {
+        SceneLoader.OnSceneLoaded.AddListener(StartGame);
+    }
+    public int GetScore()
+    {
+        return _score;
     }
 
+    public int GetCountOfAllTargets()
+    {
+        return _countOfAllTargets;
+    }
+    public int GetCountOfCatchedTargets()
+    {
+        return _countOfCatchedTargets;
+    }
     public void CatchTheTarget()
     {
-        countOfCatchedTargets++;
-        if(countOfCatchedTargets == countOfAllTargets)
+        _countOfCatchedTargets++;
+        OnTargetsCountChanged.Invoke(_countOfCatchedTargets, _countOfAllTargets);
+        if (_countOfCatchedTargets == _countOfAllTargets)
         {
             CallWin();
-            targetsCounter.text = $"Catch the targets: {countOfCatchedTargets}/{countOfAllTargets}";
             foreach(GameOverTrigger obj in FindObjectsOfType<GameOverTrigger>())
             {
                 Destroy(obj.gameObject);
             }
             soundWin.Play();
         }
-        else
-        {
-            targetsCounter.text = $"Catch the targets: {countOfCatchedTargets}/{countOfAllTargets}";
-        }
     }
     public void AddScore(int value)
     {
-        score += value;
-        scoreCounter.text = "Score\n" + score;
+        _score += value;
+        OnScoreCountChanged.Invoke(_score);
     }
     public void CallGameOver()
     {
-        gamePanel.SetActive(false);
-        menuPanel.SetActive(true);
-        restartButton.SetActive(true);
-        textOfResults.text = "You have no balls! \n:c";
-        results.text = $"Targets catched: {countOfCatchedTargets} \n Score: {score}";
         soundFail.Play();
-
+        OnGameLose.Invoke();
     }
     public void CallWin()
     {
-        gamePanel.SetActive(false);
-        menuPanel.SetActive(true);
-        nextButton.SetActive(true);
-        textOfResults.text = "Your ball is win! \nc:";
-        results.text = $"Targets catched: {countOfCatchedTargets} \n Score: {score}";
+        OnGameWin.Invoke();
         LevelSectionHandler.UnlockNewLevels(SceneManager.GetActiveScene().buildIndex);
-        LevelSectionHandler.UpdateLevelScore(SceneManager.GetActiveScene().buildIndex, score);
+        LevelSectionHandler.UpdateLevelScore(SceneManager.GetActiveScene().buildIndex, _score);
     }
     public void Pause()
     {
         Time.timeScale = 0f;
-        gamePanel.SetActive(false);
-        menuPanel.SetActive(true);
-        restartButton.SetActive(true);
-        textOfResults.text = "Pause";
-        results.text = $"Targets catched: {countOfCatchedTargets} \n Score: {score}";
+        OnGamePaused.Invoke();
     }
     public void RemovePause()
     {
         Time.timeScale = 1f;
-        gamePanel.SetActive(true);
-        restartButton.SetActive(false);
-        menuPanel.SetActive(false);
+        OnGameContinue.Invoke();
+    }
+    public void ReturnToMenu()
+    {
+        SceneLoader.Instance.LoadLevel(0);
+        //SceneManager.LoadScene(0);
+        Time.timeScale = 1f;
+    }
+    public void RestartScene()
+    {
+        SceneLoader.Instance.LoadLevel(SceneManager.GetActiveScene().buildIndex);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1f;
+    }
+    public void NextLevel()
+    {
+        SceneLoader.Instance.LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    private void StartGame()
+    {
+        _score = 0;
+        _countOfCatchedTargets = 0;
+        _countOfAllTargets = FindObjectsOfType<TargetCatcher>().Length;
+        OnGameStarted.Invoke();
     }
 }

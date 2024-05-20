@@ -74,7 +74,9 @@ public class LevelSectionHandler : MonoBehaviour
     {
         if(level <= unlockedLevels)
         {
-            SceneManager.LoadScene(level);
+            SceneLoader.Instance.LoadLevel(level);
+            //SceneManager.LoadScene(level);
+            //GameManager.OnGameStarted.Invoke();
         }
     }
     public static void UnlockNewLevels(int finishedLevel)

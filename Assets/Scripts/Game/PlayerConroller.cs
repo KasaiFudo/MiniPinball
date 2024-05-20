@@ -56,15 +56,4 @@ public class PlayerConroller : MonoBehaviour
             leftJointFlipper.spring = spring;
         }
     }
-    public void ReturnToMenu()
-    {
-        SceneManager.LoadScene("MainMenu");
-        Time.timeScale = 1f;
-    }
-    public void RestartScene()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        Time.timeScale = 1f;
-    }
-    public void NextLevel() => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 }

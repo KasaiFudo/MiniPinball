@@ -1,9 +1,16 @@
+Library\Bee\artifacts\mvdfrm\Unity.Addressables.Editor.ref.dll_5361B8999EF3E68B.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Addressables.ref.dll_6016DAA147137B86.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.EditorCoroutines.Editor.ref.dll_139783C22DD5D328.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Localization.Editor.ref.dll_E79D2E658FF04197.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Localization.ref.dll_64DD51D33D29DFBA.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Performance.Profile-Analyzer.Editor.ref.dll_0325D8536A3DFD38.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.PlasticSCM.Editor.ref.dll_EBB1919501649DC3.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Postprocessing.Editor.ref.dll_00D378B598A23C9D.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Postprocessing.Runtime.ref.dll_B73CFB0D33CD813E.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.ResourceManager.ref.dll_127027D12DC0C894.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Rider.Editor.ref.dll_12912411083945D2.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.ScriptableBuildPipeline.Editor.ref.dll_8694608BD7271C51.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.ScriptableBuildPipeline.ref.dll_0672758D12A62160.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.ref.dll_BF6AC3C71CAA8CC0.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.ref.dll_BC3B5CE4CA86DA8D.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.TestTools.CodeCoverage.Editor.ref.dll_9A34A38FCDEB0C06.mvfrm
@@ -21,6 +28,7 @@ Library\Bee\artifacts\mvdfrm\Unity.VisualScripting.Shared.Editor.ref.dll_4001A5F
 Library\Bee\artifacts\mvdfrm\Unity.VisualScripting.State.Editor.ref.dll_C201EBD4F8323092.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.VisualScripting.State.ref.dll_BD4E09F68F0E7D0F.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.VisualStudio.Editor.ref.dll_AC85F13A47E869BA.mvfrm
+Library\Bee\artifacts\mvdfrm\UnityEditor.CacheServer.ref.dll_19ABEDACB1072C67.mvfrm
 Library\Bee\artifacts\mvdfrm\UnityEditor.UI.ref.dll_DB9C9DC9DBF32258.mvfrm
 Library\Bee\artifacts\mvdfrm\UnityEngine.UI.ref.dll_98027424E2154AC3.mvfrm
 Library\Bee\artifacts\mvdfrm\UnityEditor.CoreModule.dll_9EFDD4D42045A7B1.mvfrm

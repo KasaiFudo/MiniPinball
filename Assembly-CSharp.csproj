@@ -60,22 +60,36 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\LevelS\LevelSelectHandler.cs" />
     <Compile Include="Assets\Scripts\Game\TargetCatcher.cs" />
+    <Compile Include="Assets\Scripts\UI\Game\GameOverPanel.cs" />
     <Compile Include="Assets\Scripts\Game\NormalObstacle.cs" />
+    <Compile Include="Assets\Scripts\UI\Game\Buttons\RestartButton.cs" />
+    <Compile Include="Assets\Scripts\UI\Panel.cs" />
     <Compile Include="Assets\Scripts\DoNotDestroy.cs" />
+    <Compile Include="Assets\Scripts\UI\Game\Buttons\ContinueButton.cs" />
     <Compile Include="Assets\Scripts\Game\Obstacle.cs" />
+    <Compile Include="Assets\Scripts\UI\Game\Buttons\NextLevelButton.cs" />
+    <Compile Include="Assets\Scripts\UI\Game\GameUIControl.cs" />
     <Compile Include="Assets\Scripts\Game\ZeroutObstacle.cs" />
-    <Compile Include="Assets\Scripts\UI\ButtonController.cs" />
+    <Compile Include="Assets\Scripts\UI\Game\PausePanel.cs" />
     <Compile Include="Assets\Scripts\Game\Spawner.cs" />
     <Compile Include="Assets\Scripts\Game\PlayerConroller.cs" />
-    <Compile Include="Assets\Scripts\UI\MenuController.cs" />
-    <Compile Include="Assets\Scripts\UI\CustomButton.cs" />
-    <Compile Include="Assets\Scripts\UI\SoundSettings.cs" />
+    <Compile Include="Assets\Scripts\UI\Menu\MenuController.cs" />
+    <Compile Include="Assets\Scripts\UI\Game\ScoreCounter.cs" />
+    <Compile Include="Assets\Scripts\UI\Game\Buttons\FlipperButton.cs" />
+    <Compile Include="Assets\Scripts\UI\Game\WinPanel.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\UI\Game\Buttons\MenuButton.cs" />
     <Compile Include="Assets\Scripts\LevelS\LevelButton.cs" />
+    <Compile Include="Assets\Scripts\UI\Game\Buttons\PauseButton.cs" />
+    <Compile Include="Assets\Scripts\UI\Menu\CustomButton.cs" />
     <Compile Include="Assets\Scripts\Data\Level.cs" />
     <Compile Include="Assets\Scripts\Data\PlayerData.cs" />
     <Compile Include="Assets\Scripts\Game\SpringObstacle.cs" />
     <Compile Include="Assets\GoToApps\Serialization\BinarySerializer.cs" />
+    <Compile Include="Assets\Scripts\SceneLoader.cs" />
+    <Compile Include="Assets\Scripts\UI\Game\TargetsCounter.cs" />
+    <Compile Include="Assets\Scripts\UI\Menu\SoundSettings.cs" />
+    <Compile Include="Assets\Scripts\UI\Game\GamePanel.cs" />
     <Compile Include="Assets\Scripts\Game\GameOverTrigger.cs" />
     <Compile Include="Assets\Scripts\Game\MagnetObstacle.cs" />
     <Compile Include="Assets\Scripts\UI\PostProcessingSettings.cs" />
@@ -765,9 +779,6 @@
     <Reference Include="Unity.VisualScripting.Core">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VisualScripting.Core.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
     </Reference>
@@ -776,6 +787,9 @@
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
