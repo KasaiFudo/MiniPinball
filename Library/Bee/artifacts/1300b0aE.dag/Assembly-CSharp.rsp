@@ -383,6 +383,7 @@
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/LevelS/LevelButton.cs"
 "Assets/Scripts/LevelS/LevelSelectHandler.cs"
+"Assets/Scripts/SceneLoader.cs"
 "Assets/Scripts/UI/Game/Buttons/ContinueButton.cs"
 "Assets/Scripts/UI/Game/Buttons/FlipperButton.cs"
 "Assets/Scripts/UI/Game/Buttons/MenuButton.cs"

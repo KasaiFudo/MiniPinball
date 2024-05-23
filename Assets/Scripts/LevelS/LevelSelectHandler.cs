@@ -8,15 +8,15 @@ using GoToApps.Serialization;
 public class LevelSectionHandler : MonoBehaviour
 {
     public static int unlockedLevels = 1;
-    private static int totalLevels = 29;
+    private static int totalLevels = 35;
     private static int maxfinishedLevel = 0;
     private static string pathFile;
     private static List<Level> levels;
 
     [SerializeField] private GameObject nextButton;
     [SerializeField] private GameObject backButton;
+    [SerializeField]private LevelButton[] levelButtons;
 
-    private LevelButton[] levelButtons;
     private int totalPage = 0;
     private int page = 0;
     private const int pageItem = 9;
@@ -24,8 +24,7 @@ public class LevelSectionHandler : MonoBehaviour
     private void Awake()
     {
         pathFile = Path.Combine(Application.persistentDataPath, "Levels.dat");   
-        levelButtons = GetComponentsInChildren<LevelButton>();
-        unlockedLevels = PlayerPrefs.GetInt("UnlockedLevels", 1);
+        unlockedLevels = PlayerPrefs.GetInt("UnlockedLevels", 35);
         maxfinishedLevel = PlayerPrefs.GetInt("MaxfinishedLevel", 0);
         FillLevelData();
         Refresh();

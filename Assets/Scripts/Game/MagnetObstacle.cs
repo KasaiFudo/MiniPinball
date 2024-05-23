@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class MagnetObstacle : Obstacle
 {
+    [SerializeField] private bool isHaveDelay;
+    [SerializeField] private float delay = 5f;
     [SerializeField] private float force = 1f;
     [SerializeField] private float diametr = 20f;
     [SerializeField] private int duration = 5;
@@ -67,6 +69,8 @@ public class MagnetObstacle : Obstacle
     //}
     private IEnumerator ActivateMagnetCoroutine()
     {
+        if(isHaveDelay)
+            yield return new WaitForSeconds(delay);
         while (true)
         {
             isMagnetActive = true;
