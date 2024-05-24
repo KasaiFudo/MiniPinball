@@ -368,8 +368,10 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/GoToApps/Serialization/BinarySerializer.cs"
+"Assets/Scripts/Configs/SettingsConfig.cs"
 "Assets/Scripts/Data/Level.cs"
 "Assets/Scripts/Data/PlayerData.cs"
+"Assets/Scripts/Data/Settings.cs"
 "Assets/Scripts/DoNotDestroy.cs"
 "Assets/Scripts/Game/GameOverTrigger.cs"
 "Assets/Scripts/Game/MagnetObstacle.cs"
@@ -402,6 +404,7 @@
 "Assets/Scripts/UI/Menu/SoundSettings.cs"
 "Assets/Scripts/UI/Panel.cs"
 "Assets/Scripts/UI/PostProcessingSettings.cs"
+"Assets/Scripts/UI/StartSetup.cs"
 -langversion:9.0
 
 /deterministic

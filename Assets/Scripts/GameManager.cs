@@ -102,19 +102,20 @@ public class GameManager : MonoBehaviour
     public void ReturnToMenu()
     {
         SceneLoader.Instance.LoadLevel(0);
-        //SceneManager.LoadScene(0);
         Time.timeScale = 1f;
+    }
+    public void StartGameLevel()
+    {
+        SceneLoader.Instance.LoadLevel(LevelSectionHandler.unlockedLevels);
     }
     public void RestartScene()
     {
         SceneLoader.Instance.LoadLevel(SceneManager.GetActiveScene().buildIndex);
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1f;
     }
     public void NextLevel()
     {
         SceneLoader.Instance.LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     private void StartGame()

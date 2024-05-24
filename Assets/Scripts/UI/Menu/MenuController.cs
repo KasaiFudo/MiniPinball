@@ -4,13 +4,15 @@ using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
-    [SerializeField] private GameObject _menuPanel;
-    [SerializeField] private GameObject _settingsPanel;
-    [SerializeField] private GameObject _selectLevelPanel;
     [SerializeField] private Transform _posSettings;
     [SerializeField] private Transform _posMineMenu;
     [SerializeField] private Transform _selectLevelPos;
     [SerializeField] private float _speedCam = 1000f;
+    [Space]
+    [Header("Canvas")]
+    [SerializeField] private GameObject soundSettings;
+    [SerializeField] private GameObject links;
+    [SerializeField] private GameObject languageSettings;
 
     private bool _isNeedToMoveCamera = false;
     private Camera _camera;
@@ -24,11 +26,6 @@ public class MenuController : MonoBehaviour
     {
         CameraControl();
     }
-    public void StartGame()
-    {
-        SceneManager.LoadScene(LevelSectionHandler.unlockedLevels);
-        //GameManager.OnGameStarted.Invoke();
-    }
     public void Settings()
     {
         _isNeedToMoveCamera = true;   
@@ -36,6 +33,9 @@ public class MenuController : MonoBehaviour
     }
     public void ReturnToMainMenu()
     {
+        soundSettings.SetActive(false);
+        links.SetActive(false);
+        languageSettings.SetActive(false);
         _isNeedToMoveCamera = true;
         _targetPos = _posMineMenu;
     }

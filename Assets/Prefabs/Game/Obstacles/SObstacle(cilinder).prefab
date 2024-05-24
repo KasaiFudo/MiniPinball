@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newMaterial: {fileID: 2100000, guid: 63cf8d8b49c17f74ea39232697654569, type: 2}
-  springForce: 60
+  springForce: 120
 --- !u!108 &6635896592015649247
 Light:
   m_ObjectHideFlags: 0

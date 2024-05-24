@@ -144,6 +144,10 @@ MonoBehaviour:
     m_Localized: Next level
     m_Metadata:
       m_Items: []
+  - m_Id: 2533517111042048
+    m_Localized: "Change \nlanguage"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

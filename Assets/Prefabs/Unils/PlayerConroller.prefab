@@ -46,4 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   angleTargetPos: 50
   damper: 20
-  spring: 30000
+  spring: 45000

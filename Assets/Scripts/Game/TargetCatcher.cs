@@ -8,7 +8,7 @@ public class TargetCatcher : MonoBehaviour
 
     private void Start()
     {
-        gameManager = FindObjectOfType<GameManager>();
+        gameManager = GameManager.Instance;
         sound = GetComponentInChildren<AudioSource>();
     }
     private void OnTriggerEnter(Collider other)
@@ -19,7 +19,6 @@ public class TargetCatcher : MonoBehaviour
             GetComponent<Collider>().enabled = false;
             GetComponent<Light>().enabled = false;
             gameManager.CatchTheTarget();
-            gameManager.AddScore(1000);
             sound.Play();
             Destroy(gameObject, sound.clip.length);
         }

@@ -24,7 +24,7 @@ public class LevelSectionHandler : MonoBehaviour
     private void Awake()
     {
         pathFile = Path.Combine(Application.persistentDataPath, "Levels.dat");   
-        unlockedLevels = PlayerPrefs.GetInt("UnlockedLevels", 35);
+        unlockedLevels = PlayerPrefs.GetInt("UnlockedLevels", 1);
         maxfinishedLevel = PlayerPrefs.GetInt("MaxfinishedLevel", 0);
         FillLevelData();
         Refresh();

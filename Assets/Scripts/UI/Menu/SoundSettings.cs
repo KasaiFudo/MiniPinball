@@ -6,34 +6,36 @@ using UnityEngine.UI;
 
 public class SoundSettings : MonoBehaviour
 {
-    [SerializeField] private AudioMixerGroup _mixer;
+    [SerializeField] private AudioMixerGroup mixer;
     private Slider _sliderSound;
     private Slider _sliderMusic;
 
 
     private void Start()
     {
-        _mixer.audioMixer.SetFloat("MusicVolume", PlayerPrefs.GetFloat("MusicVolume", 1));
-        _mixer.audioMixer.SetFloat("SoundsVolume", PlayerPrefs.GetFloat("SoundsVolume", 1));      
+        mixer.audioMixer.SetFloat("MusicVolume", PlayerPrefs.GetFloat("MusicVolume", 1));
+        mixer.audioMixer.SetFloat("SoundsVolume", PlayerPrefs.GetFloat("SoundsVolume", 1));      
     }
 
     public void ChangeMusic()
     {
-        _mixer.audioMixer.SetFloat("MusicVolume", _sliderMusic.value);
+        mixer.audioMixer.SetFloat("MusicVolume", _sliderMusic.value);
 
         PlayerPrefs.SetFloat("MusicVolume", _sliderMusic.value);
+        PlayerPrefs.Save();
     }
     public void ChangeSounds()
     {
-        _mixer.audioMixer.SetFloat("SoundsVolume", _sliderSound.value);
+        mixer.audioMixer.SetFloat("SoundsVolume", _sliderSound.value);
 
         PlayerPrefs.SetFloat("SoundsVolume", _sliderSound.value);
+        PlayerPrefs.Save();
     }
     public void SearchSliders()
     {
         float soundValue, musicValue;
-        _mixer.audioMixer.GetFloat("SoundsVolume", out soundValue);
-        _mixer.audioMixer.GetFloat("MusicVolume", out musicValue);
+        mixer.audioMixer.GetFloat("SoundsVolume", out soundValue);
+        mixer.audioMixer.GetFloat("MusicVolume", out musicValue);
         _sliderMusic = GameObject.Find("MusicSlider").GetComponent<Slider>();
         _sliderSound = GameObject.Find("SoundsSlider").GetComponent<Slider>();
         _sliderSound.value = soundValue;

@@ -12,6 +12,7 @@ ScriptsOnlyBuild:
     - GameUIControl
     - LevelButton
     - LevelSectionHandler
+    - LocaleSetter
     - MagnetObstacle
     - MenuButton
     - MenuController
@@ -27,6 +28,7 @@ ScriptsOnlyBuild:
     - SoundSettings
     - Spawner
     - SpringObstacle
+    - StartSetup
     - TargetCatcher
     - TargetsCounter
     - WinPanel
@@ -199,9 +201,18 @@ ScriptsOnlyBuild:
   - assembly: Unity.TextMeshPro
     fullTypeName: TMPro.TMP_Text
     methodName: set_text
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: Play
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
   - assembly: Unity.TextMeshPro
     fullTypeName: TMPro.TMP_Text
     methodName: set_text
@@ -253,6 +264,9 @@ ScriptsOnlyBuild:
   - assembly: Unity.TextMeshPro
     fullTypeName: TMPro.TMP_Text
     methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
   - assembly: Assembly-CSharp
     fullTypeName: SoundSettings
     methodName: ChangeSounds
@@ -268,6 +282,12 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: MenuController
     methodName: TwitchLink
+  - assembly: Assembly-CSharp
+    fullTypeName: LocaleSetter
+    methodName: ChangeLocale
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   - assembly: Unity.TextMeshPro
     fullTypeName: TMPro.TMP_Text
     methodName: set_text
@@ -323,14 +343,20 @@ ScriptsOnlyBuild:
     fullTypeName: MenuController
     methodName: TelegramLink
   - assembly: Assembly-CSharp
+    fullTypeName: LocaleSetter
+    methodName: ChangeLocale
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
+  - assembly: Assembly-CSharp
     fullTypeName: MenuController
     methodName: LevelSelect
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: Play
   - assembly: Assembly-CSharp
-    fullTypeName: MenuController
-    methodName: StartGame
+    fullTypeName: GameManager
+    methodName: StartGameLevel
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: Play
@@ -340,6 +366,111 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: Play
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
+  - assembly: Unity.TextMeshPro
+    fullTypeName: TMPro.TMP_Text
+    methodName: set_text
   - assembly: Unity.TextMeshPro
     fullTypeName: TMPro.TMP_Text
     methodName: set_text
@@ -6913,6 +7044,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 23902}
     - Class: 114
       Script: {instanceID: 24858}
+    - Class: 114
+      Script: {instanceID: 28312}
+    - Class: 114
+      Script: {instanceID: 89478}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -7216,7 +7351,7 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
-      Hash: 5d8f74ec04dafa72ab112f5367d9da34
+      Hash: a6ddf8e4d7740de9f8581e566f2cb554
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: SoundSettings
@@ -8020,7 +8155,7 @@ ScriptsOnlyBuild:
     className: Dropdown
   - hash:
       serializedVersion: 2
-      Hash: 5d4720456cc354179a8e24d245e8882f
+      Hash: b2925647cd4b68513e85782366cbc44c
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: MenuController
@@ -8180,6 +8315,30 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SettingsConfig
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Settings
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: StartSetup
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LocaleSetter
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
@@ -8218,4 +8377,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/33.unity
   - Assets/Scenes/34.unity
   - Assets/Scenes/35.unity
-  playerPath: D:/Mini Pinball 0.7.8.apk
+  playerPath: D:/Mini Pinball 0.7.9.apk
